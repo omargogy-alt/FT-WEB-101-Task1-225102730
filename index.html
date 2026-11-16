@@ -1,0 +1,277 @@
+<!-- Ganna Elmekawy - Student ID: 225102730 -->
+<!-- Content and layout written with AI help (Claude) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganna | Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== DRAWING KIT: shapes used by the space doodles below ========== -->
+  <svg class="sprite" aria-hidden="true">
+
+    <symbol id="saturn" viewBox="0 0 120 100">
+      <circle class="o c-purple" cx="60" cy="50" r="27"/>
+      <path class="o2" d="M37 40 Q60 50 83 38"/>
+      <path class="o2" d="M34 56 Q60 66 86 54"/>
+      <ellipse class="ringline" cx="60" cy="52" rx="54" ry="13" transform="rotate(-20 60 52)"/>
+      <ellipse class="ringfill" cx="60" cy="52" rx="54" ry="13" transform="rotate(-20 60 52)"/>
+    </symbol>
+
+    <symbol id="planet" viewBox="0 0 100 100">
+      <circle class="o c-cyan" cx="50" cy="50" r="38"/>
+      <path class="o2" d="M16 40 Q50 55 84 36"/>
+      <path class="o2" d="M14 62 Q50 78 86 60"/>
+      <circle class="o c-white" cx="34" cy="28" r="5"/>
+      <circle class="o c-white" cx="68" cy="74" r="6"/>
+    </symbol>
+
+    <symbol id="moon" viewBox="0 0 100 100">
+      <circle class="o c-yellow" cx="50" cy="50" r="40"/>
+      <circle class="o c-orange" cx="28" cy="68" r="7"/>
+      <circle class="o c-orange" cx="70" cy="26" r="5"/>
+      <path class="o2" d="M33 50 Q38 43 43 50"/>
+      <path class="o2" d="M57 50 Q62 43 67 50"/>
+      <path class="o2" d="M40 62 Q50 72 60 62"/>
+      <ellipse class="c-pink" cx="30" cy="58" rx="5" ry="3"/>
+      <ellipse class="c-pink" cx="70" cy="58" rx="5" ry="3"/>
+    </symbol>
+
+    <symbol id="rocket" viewBox="0 0 80 120">
+      <path class="o c-pink" d="M24 70 L6 98 L24 92 Z"/>
+      <path class="o c-pink" d="M56 70 L74 98 L56 92 Z"/>
+      <path class="o c-yellow" d="M30 88 Q40 120 50 88 Z"/>
+      <path class="o c-white" d="M40 5 C58 25 60 55 56 88 L24 88 C20 55 22 25 40 5 Z"/>
+      <circle class="o c-cyan" cx="40" cy="48" r="10"/>
+    </symbol>
+
+    <symbol id="ufo" viewBox="0 0 120 90">
+      <path class="beam" d="M45 58 L22 88 L98 88 L75 58 Z"/>
+      <path class="o c-cyan" d="M38 40 A22 22 0 0 1 82 40 Z"/>
+      <ellipse class="o c-purple" cx="60" cy="44" rx="50" ry="15"/>
+      <circle class="o c-yellow" cx="28" cy="48" r="4"/>
+      <circle class="o c-yellow" cx="60" cy="54" r="4"/>
+      <circle class="o c-yellow" cx="92" cy="48" r="4"/>
+    </symbol>
+
+    <symbol id="comet" viewBox="0 0 160 60">
+      <path class="tail" d="M120 18 Q55 8 4 30 Q55 52 120 42 Z"/>
+      <circle class="o c-yellow" cx="135" cy="30" r="15"/>
+      <circle class="c-white" cx="130" cy="25" r="4"/>
+    </symbol>
+
+    <symbol id="star5" viewBox="0 0 100 100">
+      <polygon class="o c-yellow" points="50,5 61,38 96,38 68,58 79,92 50,72 21,92 32,58 4,38 39,38"/>
+    </symbol>
+
+    <symbol id="sparkle" viewBox="0 0 100 100">
+      <path class="o c-white" d="M50 0 Q55 45 100 50 Q55 55 50 100 Q45 55 0 50 Q45 45 50 0 Z"/>
+    </symbol>
+
+  </svg>
+
+  <!-- ========== SPACE DOODLES (decoration only, edit or delete any line) ========== -->
+  <div class="decor" id="decor" aria-hidden="true">
+
+    <div class="galaxy g1"></div>
+    <div class="galaxy g2"></div>
+
+    <!-- class "play" = click it and it wiggles -->
+    <svg class="deco play d-moon" viewBox="0 0 100 100"><use href="#moon"/></svg>
+    <svg class="deco play d-saturn" viewBox="0 0 120 100"><use href="#saturn"/></svg>
+    <svg class="deco play hide-sm d-rocket" viewBox="0 0 80 120"><use href="#rocket"/></svg>
+    <svg class="deco play hide-sm d-ufo" viewBox="0 0 120 90"><use href="#ufo"/></svg>
+    <svg class="deco play hide-sm d-planet-a" viewBox="0 0 100 100"><use href="#planet"/></svg>
+    <svg class="deco play hide-sm d-planet-b" viewBox="0 0 100 100"><use href="#planet"/></svg>
+    <svg class="deco play hide-sm d-saturn2" viewBox="0 0 120 100"><use href="#saturn"/></svg>
+    <svg class="deco hide-sm d-comet" viewBox="0 0 160 60"><use href="#comet"/></svg>
+
+    <svg class="deco hide-sm d-star1" viewBox="0 0 100 100"><use href="#star5"/></svg>
+    <svg class="deco hide-sm d-star2" viewBox="0 0 100 100"><use href="#star5"/></svg>
+    <svg class="deco hide-sm d-star3" viewBox="0 0 100 100"><use href="#star5"/></svg>
+    <svg class="deco hide-sm d-star4" viewBox="0 0 100 100"><use href="#star5"/></svg>
+
+    <!-- constellations: hover them -->
+    <svg class="deco constel hide-sm k1" viewBox="0 0 230 160">
+      <polyline class="cline" points="15,115 55,88 98,98 135,62 175,72 210,32"/>
+      <circle class="cdot" cx="15" cy="115" r="6"/>
+      <circle class="cdot" cx="55" cy="88" r="5"/>
+      <circle class="cdot" cx="98" cy="98" r="6"/>
+      <circle class="cdot" cx="135" cy="62" r="5"/>
+      <circle class="cdot" cx="175" cy="72" r="6"/>
+      <circle class="cdot" cx="210" cy="32" r="7"/>
+      <text class="clabel" x="20" y="148">Ganna Major</text>
+    </svg>
+
+    <svg class="deco constel hide-sm k2" viewBox="0 0 230 160">
+      <polyline class="cline" points="15,45 55,110 100,55 145,115 195,50"/>
+      <circle class="cdot" cx="15" cy="45" r="6"/>
+      <circle class="cdot" cx="55" cy="110" r="5"/>
+      <circle class="cdot" cx="100" cy="55" r="7"/>
+      <circle class="cdot" cx="145" cy="115" r="5"/>
+      <circle class="cdot" cx="195" cy="50" r="6"/>
+      <text class="clabel" x="50" y="148">Pythonis</text>
+    </svg>
+
+    <svg class="deco constel hide-sm k3" viewBox="0 0 230 160">
+      <polyline class="cline" points="20,40 70,70 60,120 120,100 170,125 205,75 150,45 70,70"/>
+      <circle class="cdot" cx="20" cy="40" r="5"/>
+      <circle class="cdot" cx="70" cy="70" r="6"/>
+      <circle class="cdot" cx="60" cy="120" r="5"/>
+      <circle class="cdot" cx="120" cy="100" r="6"/>
+      <circle class="cdot" cx="170" cy="125" r="5"/>
+      <circle class="cdot" cx="205" cy="75" r="6"/>
+      <circle class="cdot" cx="150" cy="45" r="5"/>
+      <text class="clabel" x="55" y="152">Data Minor</text>
+    </svg>
+
+    <svg class="deco sparkle s1" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle s2" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle s3" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle s4" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle hide-sm s5" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle hide-sm s6" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle hide-sm s7" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle hide-sm s8" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle hide-sm s9" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle hide-sm s10" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle hide-sm s11" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+    <svg class="deco sparkle hide-sm s12" viewBox="0 0 100 100"><use href="#sparkle"/></svg>
+
+  </div>
+
+  <!-- Shooting stars and click sparkles are added here by js/script.js -->
+  <div class="sky" id="sky" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header>
+    <p class="kicker">&#10022; meet the star mapper &#10022;</p>
+    <h1>Ganna Elmekawy</h1>
+    <!-- Bar links: copy one <a> line to add a link (keep it to 2-3 for the task) -->
+    <nav class="bar">
+      <span class="brand">&#10022; Ganna</span>
+      <div class="links">
+        <a class="pill gh" href="https://github.com/omargogy-alt" target="_blank" rel="noopener">GitHub &#8599;</a>
+        <a class="pill in" href="https://linkedin.com/in/ganna-elmekawy" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== TAGLINE (swap the text any time) ========== -->
+    <p class="tagline">Data is just stars until someone draws the lines.</p>
+
+    <!-- ========== INTRO ========== -->
+    <p class="hello">Hi, I'm Ganna! I'm a Computer Science student interested in AI, data, and building useful things. Take a look around!</p>
+    <p class="hint">psst... click the planets and wish on a shooting star &#10022;</p>
+
+    <figure class="photo-wrap">
+      <img src="images/me.jpg" alt="Photo of Ganna" class="photo">
+      <figcaption>&#8593; that's me</figcaption>
+    </figure>
+
+    <!-- ========== CARDS (exactly 3 for the task) ========== -->
+    <section class="cards">
+
+      <!-- CARD 1: SKILLS. Add a skill by copying one <li> line -->
+      <article class="card">
+        <h2>Skills</h2>
+
+        <h3>Technical</h3>
+        <ul>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Power BI and DAX</li>
+          <li>Excel and Power Query</li>
+          <li>C++</li>
+          <li>C#</li>
+        </ul>
+
+        <h3>Computer Skills</h3>
+        <ul>
+          <li>ICDL</li>
+        </ul>
+
+        <h3>Soft Skills</h3>
+        <!-- EDIT THESE: keep only the ones that are really you -->
+        <ul>
+          <li>Teamwork</li>
+          <li>Communication</li>
+          <li>Problem solving</li>
+          <li>Leadership</li>
+        </ul>
+      </article>
+
+      <!-- CARD 2: EXPERIENCE. Copy a whole <div class="entry"> block to add one -->
+      <article class="card">
+        <h2>Experience</h2>
+
+        <div class="entry">
+          <h3>NTI Summer Training</h3>
+          <p>Data Analysis: Skills for the Freelance Professional, 120 hours</p>
+        </div>
+
+        <div class="entry">
+          <h3>GCI World 2026</h3>
+          <p>University of Tokyo. Data Science, Python and Machine Learning</p>
+        </div>
+      </article>
+
+      <!-- CARD 3: LEADERSHIP. Copy a whole <div class="entry"> block to add one -->
+      <article class="card">
+        <h2>Leadership</h2>
+
+        <div class="entry">
+          <h3>Head of Incubator</h3>
+          <p>RALLY Society, New Mansoura University</p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ========== PROJECTS (for later) ==========
+         Remove the comment arrows around this block when you are ready.
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="entry">
+        <h3>Project name</h3>
+        <p>One line about it.</p>
+        <a href="LINK">View project</a>
+      </div>
+    </section>
+
+    -->
+
+    <!-- ========== CONTACT FORM ========== -->
+    <form id="contact-form">
+      <h2>Send a signal</h2>
+      <p class="form-note">Leave your name and email and I'll reply from across the galaxy.</p>
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" placeholder="Captain Awesome">
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <button type="submit">Launch &#10022;</button>
+    </form>
+    <p class="greeting" id="greeting"></p>
+
+    <!-- ========== DARK MODE BUTTON ========== -->
+    <button id="theme-btn" type="button">Switch the sky</button>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>&copy; 2026 Ganna Elmekawy</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
